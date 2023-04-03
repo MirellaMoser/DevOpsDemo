@@ -1,5 +1,9 @@
 package ch.zhaw.iwi.devops.RomanNumerals;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
 public class RomanNumeralsConverterTest {
     @Test
     public void romanNumeralsConverter() {
