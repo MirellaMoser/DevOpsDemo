@@ -3,7 +3,7 @@ package ch.zhaw.iwi.devops.demo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PathListEntry<KEYTYPE> {
+public class PathListEntry<T> {
 
 	private Key key;
 	private String name;
@@ -26,7 +26,7 @@ public class PathListEntry<KEYTYPE> {
 		return key;
 	}
 
-	public void setKey(KEYTYPE key, String name) {
+	public void setKey(T key, String name) {
 		this.key = new Key(key, name);
 	}
 
@@ -128,16 +128,16 @@ public class PathListEntry<KEYTYPE> {
 
 	public class Key {
 
-		public Key(KEYTYPE key, String name) {
+		public Key(T key, String name) {
 			super();
 			this.key = key;
 			this.name = name;
 		}
 
-		private KEYTYPE key;
+		private T key;
 		private String name;
 
-		public KEYTYPE getKey() {
+		public T getKey() {
 			return key;
 		}
 

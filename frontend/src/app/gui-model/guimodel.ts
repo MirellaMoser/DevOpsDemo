@@ -143,7 +143,7 @@ export class GuiModel {
                             "newRow": true,
                         },
                         {
-                            "type": 'button',
+                            "type": "button",
                             "name": { default: "Neues Modul" },
                             "icon": "fa-sharp fa-solid fa-fire",
                             "color": "magenta",
