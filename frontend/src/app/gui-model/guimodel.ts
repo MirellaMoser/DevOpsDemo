@@ -87,6 +87,41 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "ModulForm",
+                    "title": { default: "Modul" },
+                    "url": "/modul",
+                    "formFieldList": [
+                        {
+                            "id":   "title",
+                            "type": "text",
+                            "name": { default: "Titel" },
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": { default: "Text" },
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
             ],
             "pageList": [
                 {
@@ -100,15 +135,25 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
-                            "name": { default: "ToDo-List" },
-                            "icon": "fa-file-alt",
-                            "color": "wet-asphalt",
+                            "name": { default: "Auswahl" },
+                            "icon": "fa-sharp fa-solid fa-fire",
+                            "color": "magenta",
                             "page": "toDoPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": 'button',
+                            "name": { default: "Neues Modul" },
+                            "icon": "fa-sharp fa-solid fa-fire",
+                            "color": "magenta",
+                            "page": "ModulPage",
                             "width": 2,
                             "newRow": true,
                         },
                     ]
                 },
+               
                 {
                     "id": "toDoPage",
                     "elementList": [
@@ -138,6 +183,25 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "ModulPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neues Modul"},
+                            "icon": "fa-user",
+                            "color": "orange",
+                            "width": 2,
+                            "form" : {
+                                "form" : "ModulForm"
+                            }
+                        },
+                    ]
+                },
+                
             ]
         }
     };
