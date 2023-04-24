@@ -13,19 +13,23 @@ public class CalculatorTest {
     
     @Test
     public void testSubtract() {
-        Calculator calculator = new Calculator();
-        assertEquals(2, calculator.subtract(5, 3));
         // add more test cases
     }
     
     // incomplete test cases for multiply and divide methods
     @Test
     public void testMultiply() {
-        // TODO: write test cases
+        Calculator calculator = new Calculator();
+        assertEquals(0, calculator.multiply(0, 5));
+        assertEquals(6, calculator.multiply(2, 3));
+        assertEquals(-15, calculator.multiply(3, -5));
     }
     
     @Test
     public void testDivide() {
-        // TODO: write test cases
+        Calculator calculator = new Calculator();
+        assertEquals(0, calculator.divide(0, 5));
+        assertEquals(2, calculator.divide(6, 3));
+        assertEquals(-3, calculator.divide(15, -5));
     }
 }
