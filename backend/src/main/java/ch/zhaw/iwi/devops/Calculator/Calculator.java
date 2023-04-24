@@ -19,4 +19,16 @@ public class Calculator {
         }
         return a / b;
     }
+
+    public int exponent(int a, int b) {
+        return (int) Math.pow(a, b);
+    }
+    
+    public int squareRoot(int a) {
+        return (int) Math.sqrt(a);
+    }
+    
+    public int modulo(int a, int b) {
+        return a % b;
+    }
 }
