@@ -13,7 +13,8 @@ public class CalculatorTest {
     
     @Test
     public void testSubtract() {
-        // add more test cases
+        Calculator calculator = new Calculator();
+        assertEquals(2, calculator.subtract(5, 3));
     }
     
     // incomplete test cases for multiply and divide methods
@@ -31,5 +32,11 @@ public class CalculatorTest {
         assertEquals(0, calculator.divide(0, 5));
         assertEquals(2, calculator.divide(6, 3));
         assertEquals(-3, calculator.divide(15, -5));
+    }
+    @Test
+public void testDivideByZero() {
+    Calculator calculator = new Calculator();
+    assertThrows(IllegalArgumentException.class, () -> calculator.divide(6, 0));
+    // add more test cases
     }
 }
