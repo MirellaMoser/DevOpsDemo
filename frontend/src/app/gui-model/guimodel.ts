@@ -144,6 +144,15 @@ export class GuiModel {
                         },
                         {
                             "type": "button",
+                            "name": { default: "Auswahl Nummer 2" },
+                            "icon": "fa-sharp fa-solid fa-fire",
+                            "color": "red",
+                            "page": "toDoPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
                             "name": { default: "Neues Modul" },
                             "icon": "fa-sharp fa-solid fa-fire",
                             "color": "magenta",
