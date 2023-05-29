@@ -1,6 +1,7 @@
 name: azure docker deployment
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'main'
@@ -26,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: innovad/devopsdemo:${{github.sha}}
+          tags: mirellamoser/devopsdemo:${{github.sha}}
 
   deploy:
     permissions:
@@ -41,4 +42,4 @@ jobs:
         with:
           app-name: ${{env.AZURE_WEBAPP_NAME}}
           publish-profile: ${{secrets.AZURE_WEBAPP_PUBLISH_PROFILE}}
-          images: innovad/devopsdemo:${{github.sha}}
+          images: mirellamoser/devopsdemo:${{github.sha}}
