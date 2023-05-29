@@ -160,6 +160,15 @@ export class GuiModel {
                             "width": 2,
                             "newRow": true,
                         },
+                        {
+                            "type": "button",
+                            "name": { default: "Weiteres Modul" },
+                            "icon": "fa-sharp fa-solid fa-fire",
+                            "color": "grey",
+                            "page": "ModulPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
                     ]
                 },
                
